@@ -77,7 +77,7 @@ npx expo lint
 npx tsc --noEmit
 ```
 
-O lint global pode apontar um problema conhecido em `app/(tabs)/pedidos.tsx`: a função `loadPedidos` é chamada antes da declaração e o import do cliente HTTP ainda não é usado nessa tela. Verifique novamente o resultado antes de considerar a validação concluída.
+Na última validação, `npx expo lint` e `npx tsc --noEmit` passaram. Execute-os novamente após alterações, pois novos problemas podem surgir.
 
 ## Expo e codigo nativo
 

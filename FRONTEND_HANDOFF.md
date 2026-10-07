@@ -18,6 +18,7 @@ Atualizado em 2026-10-06. Este arquivo registra o estado implementado para orien
 - O catalogo mostra um card por modelo de camiseta, com seletores expansivos de tamanho e cor. Os tamanhos mockados sao P, M, G e GG; cada modelo define sua propria lista de cores.
 - Tamanho e cor ficam no estado local de cada card. O botao de personalizacao apenas mostra uma confirmacao local; ainda nao cria nem persiste uma customizacao.
 - A tela de customizacoes usa dois registros mockados tipados e mostra modelo, cor, tamanho, texto e posicao da arte. Editar e pedir ainda sao demonstracoes locais.
+- A tela de pedidos usa tres registros mockados tipados, apresenta status e progresso da producao, e permite confirmar cancelamento apenas no estado local.
 - O cliente Axios envia `Authorization: Bearer <token>` quando ha token nao mock. `EXPO_PUBLIC_API_URL` configura o gateway; o padrao e `http://10.0.2.2:8080/api` no Android e `http://localhost:8080/api` nas demais plataformas.
 - O lint foi configurado com `eslint.config.js`, `eslint` e `eslint-config-expo`.
 
@@ -35,9 +36,8 @@ Atualizado em 2026-10-06. Este arquivo registra o estado implementado para orien
 ## Estado de validacao
 
 - `npx tsc --noEmit`: passou na ultima validacao.
-- `npx eslint 'app/(tabs)/index.tsx'`: passou na ultima validacao do catalogo.
-- `npx expo lint`: ainda falha em `app/(tabs)/pedidos.tsx`, onde `loadPedidos` e chamado antes da declaracao e o import de `api` nao e usado.
-- O typecheck deve ser repetido apos mudancas. O lint global deve ser repetido; nao considerar a falha de Pedidos como validacao bem-sucedida.
+- `npx expo lint`: passou na ultima validacao global.
+- Repita typecheck e lint apos mudancas; o estado de validacao pode mudar.
 
 ## Comandos do projeto
 
