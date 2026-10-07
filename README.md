@@ -1,5 +1,4 @@
 # Poiesis Front-end
-# Poiesis Front-end
 
 Aplicativo mobile-first para personalização de camisetas, desenvolvido com Expo, React Native, TypeScript e Expo Router. O projeto está sendo preparado para integrar com o backend Spring Boot da Poiesis.
 
